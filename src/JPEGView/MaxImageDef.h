@@ -1,11 +1,12 @@
 #pragma once
 
-// Sizes are in bytes
 // That must not be bigger than 65535 due to internal limitations
 //
 // unbounding (>65535) this causes crashes if HighQualityResampling=true
 // but if it's false, some images load (so far png tested was corrupted)
 const unsigned int MAX_IMAGE_DIMENSION = 65535;
+
+// Sizes are in bytes
 
 #ifdef _WIN64
 const unsigned int MAX_JPEG_FILE_SIZE = MAX_IMAGE_DIMENSION * MAX_IMAGE_DIMENSION;
